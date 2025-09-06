@@ -1,0 +1,24 @@
+[project]
+name = "pyramids-cz-plugin"
+version = "0.1.0"
+description = "Commitizen plugin for pyramids-gis"
+readme = "README.md"
+requires-python = ">=3.11, <4"
+dependencies = [
+    "commitizen>=4.8.4",
+]
+
+[project.entry-points."commitizen.plugin"]
+cz_pyramids = "my_commit.cz_plugin:PyramidsCz"
+
+
+
+[tool.setuptools]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["my_commit", "my_commit.*"]
+
+[build-system]
+requires = ["setuptools>=80.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
